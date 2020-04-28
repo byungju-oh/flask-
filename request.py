@@ -31,3 +31,4 @@ if __name__=="__main__":
     app.run()
     #app.run(host='192.168.2.3', port=8080) 서버 호스트 설정가능 0000하면 어떤 호스트도가능
     #포트번호도 설정가능
+    #app.run(host= ,debug=True)기본이 flase라 true 설정하면 디버그 할수있다
