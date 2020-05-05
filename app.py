@@ -1,4 +1,4 @@
-import torch
+#import torch
 import sys
 import cv2
 import tensorflow.keras
@@ -9,7 +9,7 @@ from PIL import Image, ImageOps
 import numpy as np
 from flask import Flask, redirect, url_for, request, render_template
 #파일 업로드
-from flask import request
+
 import glob
 #파일이름 보호
 from werkzeug.utils import secure_filename
@@ -77,4 +77,4 @@ def upload():
     return None
 #메인 모듈로 실행될 때 플라스크 서버 구동
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
