@@ -22,7 +22,7 @@ app = Flask(__name__)
 np.set_printoptions(suppress=True)
 
 # Load the model
-model = tensorflow.keras.models.load_model('keras_model.h5')
+model = tensorflow.keras.models.load_model('keras_model.h5', compile=False)
 print('model')
 # Create the array of the right shape to feed into the keras model
 # The 'length' or number of images you can put into the array is
@@ -71,7 +71,7 @@ def upload():
 
         preds = pred(file_path,model)
         pred_class = decode_predictions(preds, top=1)
-        result = str(pred_class[0][0][1])             
+        result = str(pred_class[0][0][1])
         return result
 
     return None
